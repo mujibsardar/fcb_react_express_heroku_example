@@ -1,3 +1,3 @@
-# Simple Example of Deploying a react express app to Heroku 2020
+# Simple Example of Deploying a React Express (Node) App to Heroku 2020
 
-A simple react express app that I deployed to heroku and used in my YouTube video "Deploying React Express App to Heroku Made Super Simple!"
+A simple React Express (Node) app that I deployed to Heroku and used in my YouTube video "Deploying React Express App to Heroku Made Super Simple!"
