@@ -9,7 +9,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // --> Add this
 // ** MIDDLEWARE ** //
-const whitelist = ['http://localhost:3000', 'http://localhost:8080']
+const whitelist = ['http://localhost:3000', 'http://localhost:8080', 'https://shrouded-journey-38552.herokuapp.com']
 const corsOptions = {
   origin: function (origin, callback) {
     console.log("** Origin of request " + origin)
