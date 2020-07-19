@@ -31,7 +31,7 @@ class App extends React.Component {
  createPerson = (event) => {
     event.preventDefault();
     axios.post(
-      'http://localhost:42629/api',
+      '/api',
       {
         person: {
           name: this.state.name,
@@ -46,7 +46,7 @@ class App extends React.Component {
 }
 
 loadPeople = () => {
-axios.get('http://localhost:42629/api').then(
+axios.get('/api').then(
   (response) => {
     console.log(response.people)
   }
