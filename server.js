@@ -9,7 +9,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // --> Add this
 // ** MIDDLEWARE ** //
-const whitelist = ['http://localhost:3000']
+const whitelist = ['http://localhost:3000', 'http://localhost:8080']
 const corsOptions = {
   origin: function (origin, callback) {
     if (whitelist.indexOf(origin) !== -1 || !origin) {
@@ -30,7 +30,7 @@ app.get('/api/', (req, res) => {
 });
 app.post('/api/', (req, res) => {
   res.send(
-    `Person created: ${JSON.stringify(req.body.person)}`,
+    `Person created: ${req.body.person.name}`,
   );
 });
 
