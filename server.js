@@ -2,12 +2,12 @@ const express = require('express');
 const bodyParser = require('body-parser')
 const path = require('path');
 const app = express();
-// app.use(express.static(path.join(__dirname, 'build')));
 const helmet = require('helmet') // creates headers that protect from attacks (security)
 const cors = require('cors')  // allows/disallows cross-site communication
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
+// --> Add this
 // ** MIDDLEWARE ** //
 const whitelist = ['http://localhost:3000']
 const corsOptions = {
@@ -22,6 +22,7 @@ const corsOptions = {
   }
 }
 app.use(helmet())
+// --> Add this
 app.use(cors(corsOptions))
 
 app.get('/api/', (req, res) => {
@@ -33,14 +34,15 @@ app.post('/api/', (req, res) => {
   );
 });
 
-// if (process.env.NODE_ENV === 'production') {
-//   // Serve any static files
-//   app.use(express.static(path.join(__dirname, 'client/build')));
-// // Handle React routing, return all requests to React app
-//   app.get('*', function(req, res) {
-//     res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
-//   });
-// }
+// --> Add this
+if (process.env.NODE_ENV === 'production') {
+  // Serve any static files
+  app.use(express.static(path.join(__dirname, 'client/build')));
+// Handle React routing, return all requests to React app
+  app.get('*', function(req, res) {
+    res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
+  });
+}
 
 const PORT = process.env.PORT || 8080
 app.listen(PORT, (req, res) => {
