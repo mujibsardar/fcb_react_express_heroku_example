@@ -5,7 +5,7 @@ const app = express();
 const helmet = require('helmet') // creates headers that protect from attacks (security)
 const cors = require('cors')  // allows/disallows cross-site communication
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({ extended: true })); 
 
 // --> Add this
 // ** MIDDLEWARE ** //
