@@ -6,8 +6,12 @@ https://youtu.be/xgvLP3f2Y7k
 
 
 Other Helpful Links:
+
 Tutoring:                 https://avantutor.com
-Coding Q&A:               https://askavan.com 
+
+Coding Q&A:               https://askavan.com
+
 Free Coding Bootcamp:     https://freecodingbootcamp.org
+
 
 
