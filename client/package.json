@@ -9,7 +9,8 @@
     "axios": "^0.21.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-scripts": ">=4.0.1"
+    "react-scripts": ">=4.0.1",
+    "object-path": ">=0.11.5"
   },
   "proxy": "http://localhost:8080",
   "scripts": {
