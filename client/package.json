@@ -11,7 +11,7 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": ">=4.0.1",
-    "object-path": ">=0.11.5",
+    "object-path": ">=0.11.8",
     "url-parse": "^1.5.0"
   },
   "proxy": "http://localhost:8080",
